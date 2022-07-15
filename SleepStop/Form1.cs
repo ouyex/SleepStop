@@ -184,6 +184,12 @@ namespace SleepStop
                 startButton.Text = "Stop";
                 runningLabel.Text = "Status: Running";
                 resetConfigButton.Enabled = false;
+                drive1SelectButton.Enabled = false;
+                drive2SelectButton.Enabled = false;
+                drive3SelectButton.Enabled = false;
+                drive4SelectButton.Enabled = false;
+                numericUpDown1.Enabled = false;
+                clearButton.Enabled = false;
                 timer.Interval = (int)(writeTime * 60 * 1000);
                 timer.Tick += new EventHandler(TimerTick);
                 timer.Start();
@@ -196,6 +202,12 @@ namespace SleepStop
                 startButton.Text = "Start";
                 runningLabel.Text = "Status: Stopped";
                 resetConfigButton.Enabled = true;
+                drive1SelectButton.Enabled = true;
+                drive2SelectButton.Enabled = true;
+                drive3SelectButton.Enabled = true;
+                drive4SelectButton.Enabled = true;
+                numericUpDown1.Enabled = true;
+                clearButton.Enabled = true;
                 Logger.WriteLine("Stopped.");
                 timer.Stop();
             }
