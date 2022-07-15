@@ -233,12 +233,12 @@ namespace SleepStop
                 {
                     File.WriteAllText(filePath, "");
                     File.Delete(filePath);
+                    Logger.WriteLine($"Wrote/Deleted file at path \"{folderPaths[i]}\".");
                 }
                 catch (Exception ex)
                 {
                     Logger.WriteLine($"Failed to write/delete file at path \"{folderPaths[i]}\". Exception:\n{ex}\n");
                 }
-                Logger.WriteLine($"Wrote/Deleted file at path \"{folderPaths[i]}\".");
             }
         }
 
