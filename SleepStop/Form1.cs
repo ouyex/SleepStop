@@ -153,14 +153,11 @@ namespace SleepStop
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            drive1SelectionLabel.Text = "Drive Selected: None";
-            drive2SelectionLabel.Text = "Drive Selected: None";
-            drive3SelectionLabel.Text = "Drive Selected: None";
-            drive4SelectionLabel.Text = "Drive Selected: None";
             for (int i = 0; i < folderPaths.Length; i++)
                 folderPaths[i] = "";
             Logger.WriteLine("Cleared all drive selections.");
             WriteConfigData();
+            UpdateLabelText();
         }
 
         private void startButton_Click(object sender, EventArgs e)
