@@ -251,7 +251,7 @@ namespace SleepStop
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
             Show();
-            WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Normal;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
