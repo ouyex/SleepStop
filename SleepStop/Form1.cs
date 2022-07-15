@@ -232,6 +232,7 @@ namespace SleepStop
                 try
                 {
                     File.WriteAllText(filePath, "");
+                    System.Threading.Thread.Sleep(50);
                     File.Delete(filePath);
                     Logger.WriteLine($"Wrote/Deleted file at path \"{folderPaths[i]}\".");
                 }
